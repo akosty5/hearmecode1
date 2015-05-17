@@ -1,0 +1,22 @@
+slices= 25
+pb= 30
+jelly= 50
+
+bread_sandwiches=slices/2
+
+#First Goal! Nailed it
+if slices>=2 and pb>=1 and jelly>=1:
+    print "You can make a sandwich!"
+
+#Second Goal: How many sandwiches can you
+    if pb>=bread_sandwiches and jelly>=bread_sandwiches:
+        print "You can make {0} whole pb&j sandwiches".format(bread_sandwiches)
+    elif pb<bread_sandwiches or jelly<bread_sandwiches:
+         if pb<jelly:
+             print pb
+         elif jelly<pb:
+             print jelly
+         else: "You can't make a sandwich. You're going to starveee!!"
+
+#Third Goal: Open face sandwiches
+print "and {0} open faced pj&j sandwich(es)".format(slices%2)
